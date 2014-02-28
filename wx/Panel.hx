@@ -10,8 +10,8 @@ class Panel extends Window
    {
       if (inParent==null)
          throw Error.INVALID_PARENT;
-      var handle = wx_panel_create(
-         [inParent.wxHandle,inID,"",inPosition,inSize, inStyle] );
+      var args:Array<Dynamic> = [inParent.wxHandle, inID, "", inPosition, inSize, inStyle];
+      var handle = wx_panel_create(args);
       return new Panel(handle);
    }
 

@@ -1,6 +1,12 @@
 #include "HaxeAPI.h"
 #include <map>
 
+//#if defined(__WXMSW__) && !defined(__WXWINCE__)
+//#pragma comment(linker, "\"/manifestdependency:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='6595b64144ccf1df'\"")
+//#endif
+
+//#define wxUSE_NO_MANIFEST 0
+
 // --- Helpers --------------------------------------------
 
 DEFINE_KIND(gObjectKind);

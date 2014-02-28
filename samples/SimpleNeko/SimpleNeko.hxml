@@ -1,0 +1,4 @@
+-main BasicFrame
+-cp src
+-lib waxe
+-neko bin/BasicFrame.n

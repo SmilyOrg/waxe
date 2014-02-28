@@ -45,6 +45,7 @@
    <file name="waxe/Dialog.cpp"/>
    <file name="waxe/Button.cpp"/>
    <file name="waxe/ListBox.cpp"/>
+   <file name="waxe/ListView.cpp"/>
    <file name="waxe/CheckBox.cpp"/>
    <file name="waxe/ComboBox.cpp"/>
    <file name="waxe/DC.cpp"/>
@@ -117,10 +118,13 @@
    <lib name="-lXft" if="linux"/>
 -->
 
-   <lib name="${WXLIB}/wxbase29u.lib" if="windows"/>
-   <lib name="${WXLIB}/wxmsw29u_core.lib" if="windows"/>
-   <lib name="${WXLIB}/wxmsw29u_stc.lib" if="windows"/>
-   <lib name="${WXLIB}/wxmsw29u_gl.lib" if="windows"/>
+   
+   <!--<lib name="waxe.res" if="windows"/>-->
+   
+   <lib name="${WXLIB}/wxbase30u.lib" if="windows"/>
+   <lib name="${WXLIB}/wxmsw30u_core.lib" if="windows"/>
+   <lib name="${WXLIB}/wxmsw30u_stc.lib" if="windows"/>
+   <lib name="${WXLIB}/wxmsw30u_gl.lib" if="windows"/>
    <lib name="${WXLIB}/wxpng.lib" if="windows"/>
    <lib name="${WXLIB}/wxzlib.lib" if="windows"/>
    <lib name="${WXLIB}/wxscintilla.lib" if="windows"/>

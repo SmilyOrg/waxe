@@ -7,9 +7,9 @@ class ListBox extends ControlWithItems
    public static inline var NO_SELECTION = -1;
 
 	//public var label(getLabel,setLabel):String;
-	public var onSelected(null,setOnSelected) : Dynamic->Void;
-	public var onDClick(null,setOnDClick) : Dynamic->Void;
-   public var selection(getSelection,setSelection) : Int;
+	public var onSelected(null,set_onSelected) : Dynamic->Void;
+	public var onDClick(null,set_onDClick) : Dynamic->Void;
+   public var selection(get_selection,set_selection) : Int;
 
    public static function create(inParent:Window, ?inID:Null<Int>,
 	                ?inPosition:Position,
@@ -17,8 +17,8 @@ class ListBox extends ControlWithItems
    {
 		if (inParent==null)
 			throw Error.INVALID_PARENT;
-      var handle = wx_list_box_create(
-			[inParent.wxHandle,inID,"",inPosition,inSize, inStyle], inValues );
+      var args:Array<Dynamic> = [inParent.wxHandle, inID, "", inPosition, inSize, inStyle];
+      var handle = wx_list_box_create( args, inValues );
       return new ListBox(handle);
    }
 
@@ -28,12 +28,12 @@ class ListBox extends ControlWithItems
 	   super(inHandle);
    }
 
-	function setOnSelected(f:Dynamic->Void)
+	function set_onSelected(f:Dynamic->Void)
 	   {setHandler(wx.EventID.COMMAND_LISTBOX_SELECTED,f); return f;}
-	function setOnDClick(f:Dynamic->Void)
+	function set_onDClick(f:Dynamic->Void)
 	   {setHandler(wx.EventID.COMMAND_LISTBOX_DOUBLECLICKED,f); return f;}
-   public function getSelection() : Int { return wx_list_box_get_selection(wxHandle); }
-   public function setSelection(val:Int) : Int
+   public function get_selection() : Int { return wx_list_box_get_selection(wxHandle); }
+   public function set_selection(val:Int) : Int
    {
       wx_list_box_set_selection(wxHandle,val);
       return val;
