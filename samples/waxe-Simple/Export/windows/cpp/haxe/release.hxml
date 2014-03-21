@@ -1,0 +1,14 @@
+-main ApplicationMain 
+-lib lime
+-lib hxlibc
+-lib waxe
+-lib format
+-cp Source
+-D tools=1.2.6
+-D lime_native
+-D no-compilation
+-D windows
+-D desktop
+-cp Export/windows/cpp/haxe
+-cpp Export/windows/cpp/obj
+--macro allowPackage("flash")

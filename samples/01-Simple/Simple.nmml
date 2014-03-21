@@ -22,7 +22,10 @@
 
    <!--<icon name="../icon.svg" />-->
 
+	<set name="waxe" />
+	<source path="../.." />
 
+  <haxelib name="openfl" />
   <haxelib name="waxe" />
 
   <ndll name="waxe" haxelib="waxe" />

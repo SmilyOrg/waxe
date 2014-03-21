@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Simple01" package="org.haxe.waxe.Simple01" version="1.0.0" company="waxe" />
+	<app path="Export" file="Simple" main="Simple" />
+	
+	<!--<window width="800" height="600" if="desktop" />-->
+	
+	<source path="Source" />
+    
+    <haxelib name="lime" />
+    <haxelib name="waxe" />
+    <haxelib name="format" />
+	
+	<assets path="Assets" rename="assets" exclude="*.svg" />
+	<icon path="Assets/lime.svg" />
+    
+    <templatePath name="templates" />
+
+</project>

@@ -1,5 +1,5 @@
-import flash.display.Sprite;
-import flash.events.Event;
+import nme.display.Sprite;
+import nme.events.Event;
 
 
 class NMEPreloader extends Sprite
@@ -65,7 +65,7 @@ class NMEPreloader extends Sprite
 			
 		} else {
 			
-			return flash.Lib.current.stage.stageHeight;
+			return nme.Lib.current.stage.stageHeight;
 			
 		}
 	}
@@ -81,7 +81,7 @@ class NMEPreloader extends Sprite
 			
 		} else {
 			
-			return flash.Lib.current.stage.stageWidth;
+			return nme.Lib.current.stage.stageWidth;
 			
 		}
 	}
@@ -105,7 +105,7 @@ class NMEPreloader extends Sprite
 		
 		if (percentLoaded > 1)
 		{
-			percentLoaded = 1;
+			percentLoaded == 1;
 		}
 		
 		progress.scaleX = percentLoaded;

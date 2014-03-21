@@ -1,5 +1,5 @@
-import flash.display.Sprite;
-import flash.events.Event;
+import nme.display.Sprite;
+import nme.events.Event;
 
 
 class NMEPreloader extends Sprite
@@ -51,13 +51,13 @@ class NMEPreloader extends Sprite
 	
 	public function getBackgroundColor():Int
 	{
-		return 16777215;
+		return ::WIN_BACKGROUND::;
 	}
 	
 	
 	public function getHeight():Float
 	{
-		var height = 600;
+		var height = ::WIN_HEIGHT::;
 		
 		if (height > 0) {
 			
@@ -65,7 +65,7 @@ class NMEPreloader extends Sprite
 			
 		} else {
 			
-			return flash.Lib.current.stage.stageHeight;
+			return nme.Lib.current.stage.stageHeight;
 			
 		}
 	}
@@ -73,7 +73,7 @@ class NMEPreloader extends Sprite
 	
 	public function getWidth():Float
 	{
-		var width = 800;
+		var width = ::WIN_WIDTH::;
 		
 		if (width > 0) {
 			
@@ -81,7 +81,7 @@ class NMEPreloader extends Sprite
 			
 		} else {
 			
-			return flash.Lib.current.stage.stageWidth;
+			return nme.Lib.current.stage.stageWidth;
 			
 		}
 	}
@@ -105,7 +105,7 @@ class NMEPreloader extends Sprite
 		
 		if (percentLoaded > 1)
 		{
-			percentLoaded = 1;
+			percentLoaded == 1;
 		}
 		
 		progress.scaleX = percentLoaded;
